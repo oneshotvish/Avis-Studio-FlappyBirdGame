@@ -82,11 +82,11 @@ public class ColumnPool : MonoBehaviour
 		{
 
 
-			for (int i = 0; i < accountMan.itemList.shopItems.Length; i++)
+			for (int i = 0; i < accountMan.itemList.Length; i++)
 			{
-				if (accountMan.itemList.shopItems[i].isActive && accountMan.itemList.shopItems[i].itemType.ToString() == "Wall")
+				if (accountMan.itemList[i].isActive && accountMan.itemList[i].itemType.ToString() == "Wall")
 				{
-					columnPrefab = accountMan.itemList.shopItems[i].objPrefab;
+					columnPrefab = accountMan.itemList[i].objPrefab;
 				}
 			}
 		}

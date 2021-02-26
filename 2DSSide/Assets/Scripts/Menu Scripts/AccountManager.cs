@@ -6,30 +6,34 @@ public class AccountManager : MonoBehaviour
 {
     public Account acc;
     private int shopLength;
-    public ShopItemList itemList;
+    public ShopItem[] itemList;
     public ShopManager birdShopManager, wallShopManager;
     private CoinManager coinManager;
 
     
-
-    //Destroy Duplicate Versions
+    /// <summary>
+    /// Awake
+    /// </summary>
     private void Awake()
     {
+        //Destroy Duplicate Versions
         if (GameObject.FindGameObjectsWithTag("AccountManager").Length > 1)
         {
             Destroy(gameObject);
         }
+        //Dont Destroy this object
         DontDestroyOnLoad(this.gameObject);       
     }
 
-    //Start
+    /// <summary>
+    /// Start
+    /// </summary>
     void Start()
     {           
-        //Get ItemList Script
-        itemList = GetComponent<ShopItemList>();
         //Get Shop Length
-        shopLength = itemList.shopItems.Length;
+        shopLength = itemList.Length;
         
+        //Load Account data
         LoadAccount();
     }
 
@@ -51,59 +55,77 @@ public class AccountManager : MonoBehaviour
         birdShopManager.transform.parent.gameObject.SetActive(false);
     }
 
-    //Updates Master List of shop items after a new purchase in the shop
+    /// <summary>
+    /// Updates Master List of shop items after a new purchase in the shop
+    /// </summary>
+    /// <param name="shopItem"></param>
+    //
     public void UpdateShop(ShopItem shopItem)
     {
         //Find this item
         for (int i = 0; i < shopLength; i++)
         {
-            if (itemList.shopItems[i].itemName == shopItem.itemName)
+            if (itemList[i].itemName == shopItem.itemName)
             {
                 //Set it equal to updated version
-                itemList.shopItems[i] = shopItem;
+                itemList[i] = shopItem;
             }
         }
     }
 
-    //Updates Master List after a change in active item
+    /// <summary>
+    /// Updates the current active item
+    /// </summary>
+    /// <param name="shopItem">Item to set active</param>
     public void UpdateActive(ShopItem shopItem)
     {
+        //Set this item active
+        shopItem.isActive = true;
         //For every other item of this type
         for (int i = 0; i < shopLength; i++)
         {
-            if (itemList.shopItems[i].itemType == shopItem.itemType && itemList.shopItems[i].itemName != shopItem.itemName)
+            if (itemList[i].itemType == shopItem.itemType && itemList[i].itemName != shopItem.itemName)
             {
                 //Set it inactive
-                itemList.shopItems[i].isActive = false;
+                itemList[i].isActive = false;
             }
         }
-        //Tell Shop Manager to update UI
-        birdShopManager.UpdateShopItems();
-        wallShopManager.UpdateShopItems();
     }
 
-    //Adds Coins
+    /// <summary>
+    /// Add coins to account
+    /// </summary>
+    /// <param name="amount">Amount of coins to add</param>
     public void AddCoins(int amount)
     {
+        //Add coins
         acc.coins += amount;
         Debug.Log("Added Coins (" + amount + ") Total = " + acc.coins);
         if (coinManager != null)
         {
+            //Update UI to display coins
             coinManager.UpdateCoinUI(acc.coins);
         }
     }
 
-    //Subtract Coins
+    /// <summary>
+    /// Subtract coins from account
+    /// </summary>
+    /// <param name="amount">amount to subtract</param>
     public void SubtractCoins(int amount)
     {
+        //Subtract coins
         acc.coins -= amount;
         if (coinManager != null)
         {
+            //Update UI to display coins
             coinManager.UpdateCoinUI(acc.coins);
         }
     }
 
-    //Save Account Info to Player Prefs
+    /// <summary>
+    /// Save Account Info to player prefs
+    /// </summary>
     public void SaveAccount()
     {
         //Coins
@@ -133,13 +155,14 @@ public class AccountManager : MonoBehaviour
         }
     }
 
-    //Get account info from Player Prefs
+    /// <summary>
+    /// Load account info from player prefs
+    /// </summary>
     public void LoadAccount()
     {
         //Create new Account and fill data
-        acc = new Account(0, itemList.shopItems);
-        //Coins (Default 0)
-        acc.coins = PlayerPrefs.GetInt("Coins", 0);
+        acc = new Account(PlayerPrefs.GetInt("Coins", 0), itemList);
+        
         //Shop (Default unowned)
         for (int i = 0; i < shopLength; i++)
         {
@@ -167,6 +190,9 @@ public class AccountManager : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Save account data on quit
+    /// </summary>
     private void OnApplicationQuit()
     {
         SaveAccount();

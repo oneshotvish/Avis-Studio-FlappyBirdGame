@@ -4,43 +4,72 @@ using UnityEngine;
 
 public class ShopManager : MonoBehaviour
 {
-    private AccountManager shopItemList;
+    //Holds Shop Data
+    private AccountManager accountManager;
+    //Parent for the shop items
     public GameObject shopItemParent;
+    //Enum of the different shop grid types
     public enum ItemType
     {
         Bird,
         Wall,
     }
+    //This manager's grid type
     public ItemType gridType;
 
-    // Start is called before the first frame update
+    /// <summary>
+    /// Start
+    /// </summary>
     void Start()
     {
-        //Get Master List
-        shopItemList = FindObjectOfType<AccountManager>();
+        //Get Account Manager
+        accountManager = GameObject.FindGameObjectWithTag("AccountManager").GetComponent<AccountManager>();
+        //Create the Shop Items
         InitShopItems();
+        //Set up Shop Manger UI
+        InitUI();
     }
+
+    /// <summary>
+    /// Creates and fills each shop item from the shop item list
+    /// </summary>
     public void InitShopItems()
     {
         //Send each individual shop item down to their respective grid objects
-        for (int i = 0; i < shopItemList.itemList.shopItems.Length; i++)
+        for (int i = 0; i < accountManager.itemList.Length; i++)
         {
-            if(shopItemList.itemList.shopItems[i].itemType.ToString() == gridType.ToString())
+            //Only for this grid type
+            if (accountManager.itemList[i].itemType.ToString() == gridType.ToString())
             {
+                //Create the shop item
                 GameObject child = Instantiate(shopItemParent, gameObject.transform.position, gameObject.transform.rotation, gameObject.transform);
-                child.GetComponent<ShopButtonScript>().SetShopItem(shopItemList.itemList.shopItems[i]); ;
+                //Fill shop item data
+                child.GetComponent<ShopButtonScript>().SetShopItem(accountManager.itemList[i]); ;
             }
-            
         }
     }
 
-    //Updating the Shop items UI from the Account Manager List
+    /// <summary>
+    /// Updates the UI for all of the shop items
+    /// </summary>
     public void UpdateShopItems()
     {
         //Get each UI object and Update them
         foreach(Transform child in transform)
         {
             child.GetComponent<ShopButtonScript>().InitUI();
+        }
+    }
+
+    /// <summary>
+    /// Initializes the UI for the Shop Manager
+    /// </summary>
+    private void InitUI()
+    {
+        //Only keep the initial grid active
+        if(gridType != ItemType.Bird)
+        {
+            gameObject.SetActive(false);
         }
     }
 }

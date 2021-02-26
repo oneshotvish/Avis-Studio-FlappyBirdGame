@@ -4,23 +4,23 @@ using UnityEngine;
 
 public class BirdSkinSelection : MonoBehaviour
 {
-    private AccountManager accountMan;
+    private AccountManager accMan;
     public GameObject spawnPoint;
 
     // Start is called before the first frame update
     void Start()
     {
         //Get account manager
-        accountMan = FindObjectOfType<AccountManager>();
+        accMan = FindObjectOfType<AccountManager>();
 
         //Find the active bird and Spawn it
-        if (accountMan != null)
+        if (accMan != null)
         {
-            for (int i = 0; i < accountMan.itemList.shopItems.Length; i++)
+            for (int i = 0; i < accMan.itemList.Length; i++)
             {
-                if (accountMan.itemList.shopItems[i].isActive && accountMan.itemList.shopItems[i].itemType.ToString() == "Bird")
+                if (accMan.itemList[i].isActive && accMan.itemList[i].itemType.ToString() == "Bird")
                 {
-                    Instantiate(accountMan.itemList.shopItems[i].objPrefab, spawnPoint.transform.position, spawnPoint.transform.rotation);
+                    Instantiate(accMan.itemList[i].objPrefab, spawnPoint.transform.position, spawnPoint.transform.rotation);
                 }
             }
         }
