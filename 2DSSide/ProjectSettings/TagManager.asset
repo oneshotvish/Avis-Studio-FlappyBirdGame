@@ -10,6 +10,7 @@ TagManager:
   - BirdShopManager
   - WallShopManager
   - CoinManager
+  - ItemController
   layers:
   - Default
   - TransparentFX

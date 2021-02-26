@@ -1,11 +1,13 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class MenuUIManager : MonoBehaviour
 {
     public GameObject[] objToEnable;
     public GameObject[] objToDisable;
+    public Button buttonToInteractable, buttonToUninteractable;
     
 
     public void EnableGOs()
@@ -22,5 +24,14 @@ public class MenuUIManager : MonoBehaviour
         {
             objToDisable[i].SetActive(false);
         }
+    }
+
+    public void MakeButtonInteractable()
+    {
+        buttonToInteractable.interactable = true;
+    }
+    public void MakeButtonUnInteractable()
+    {
+        buttonToUninteractable.interactable = false;
     }
 }
