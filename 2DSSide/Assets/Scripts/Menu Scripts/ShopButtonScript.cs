@@ -7,8 +7,6 @@ using TMPro;
 public class ShopButtonScript : MonoBehaviour
 {
     public SelectedItemController itemController;
-    //Script with Master List
-    private AccountManager masterItemList;
     //This particular item
     private ShopItem thisShopItem;
     //Buy Button
@@ -20,8 +18,6 @@ public class ShopButtonScript : MonoBehaviour
     //Start
     private void Start()
     {
-        //Get Master List Script
-        masterItemList = GameObject.FindGameObjectWithTag("AccountManager").GetComponent<AccountManager>();
         itemController = GameObject.FindGameObjectWithTag("ItemController").GetComponent<SelectedItemController>();
     }
 

@@ -10,6 +10,6 @@ public class CoinManager : MonoBehaviour
     // Update is called once per frame
     public void UpdateCoinUI(int number)
     {
-        coinUI.SetText(number.ToString());
+        coinUI.SetText(": " + number.ToString());
     }
 }

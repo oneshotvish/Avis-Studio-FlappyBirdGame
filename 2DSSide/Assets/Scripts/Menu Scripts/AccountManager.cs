@@ -35,13 +35,8 @@ public class AccountManager : MonoBehaviour
         
         //Load Account data
         LoadAccount();
-    }
 
-    //Debug Coins
-    public int coinss;
-    private void Update()
-    {
-        coinss = acc.coins;
+        AddCoins(1000);
     }
 
     //Called From MainMenuLoadHelper
@@ -121,6 +116,15 @@ public class AccountManager : MonoBehaviour
             //Update UI to display coins
             coinManager.UpdateCoinUI(acc.coins);
         }
+    }
+
+    /// <summary>
+    /// Get current coin amount
+    /// </summary>
+    /// <returns></returns>
+    public int GetCoins()
+    {
+        return acc.coins;
     }
 
     /// <summary>
