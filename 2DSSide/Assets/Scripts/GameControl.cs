@@ -25,8 +25,13 @@ public class GameControl : MonoBehaviour
 
 	public GameObject gameOvertext;             //A reference to the object that displays the text which appears when the player dies.
 
-	private int score = 0; //The player's score.
-	private int highscore; //highscore
+	private float score = 0; //The player's score.
+	private float highscore; //highscore
+
+	[SerializeField]
+	private float score_multi = 1f;
+
+	private int coins = 0;
 	public bool gameOver = false;               //Is the game over?
 	public float scrollSpeed = 1.5f;
 
@@ -57,7 +62,7 @@ public class GameControl : MonoBehaviour
 		if (PlayerPrefs.HasKey("Highscore"))
 		{
 			//PlayerPrefs.SetInt("Highscore", 0);
-			highscore = PlayerPrefs.GetInt("Highscore");
+			highscore = PlayerPrefs.GetFloat("Highscore");
 		}
 		
 	}
@@ -96,6 +101,12 @@ public class GameControl : MonoBehaviour
 			//gameOvertext.SetActive(false);
 			//...reload the current scene.
 			//SceneManager.LoadScene(1);
+		}
+
+		if (!gameOver && scrollStarted)
+		{
+			score += Time.deltaTime * score_multi;
+			scoreText.text = ": " + System.Math.Round(score, 1).ToString();
 		}
 
 		/*if (!gameOver && scrollStarted)
@@ -138,11 +149,11 @@ public class GameControl : MonoBehaviour
 		if (gameOver)
 			return;
 		//If the game is not over, increase the score...
-		score++;
+		coins++;
 		//...and adjust the score text.
-		scoreText.text = ": " + score.ToString();
+		//scoreText.text = ": " + score.ToString();
 
-		updateHighscore();
+		//updateHighscore();
 	}
 
 	private void updateHighscore()
@@ -150,26 +161,28 @@ public class GameControl : MonoBehaviour
 		if(score > highscore)
 		{
 			highscore = score;
-			PlayerPrefs.SetInt("Highscore", highscore);
+			PlayerPrefs.SetFloat("Highscore", highscore);
 		}
 		
 	}
 
 	public void BirdDied()
 	{
+		updateHighscore();
 		//Activate the game over text.
 		gameOvertext.SetActive(true);
 
 		//set score text
-		endScore.text = "             :" + score.ToString();
-		highscoreText.text = "             :" + highscore.ToString();
+		endScore.text = ": " + coins.ToString();
+		//highscoreText.text = "             :" + highscore.ToString();
+		highscoreText.text = ": " + System.Math.Round(score, 1).ToString();
 
 		//Add coins to Account
 
 		//This line was causing scroll error
-		if(accountMan != null)
+		if (accountMan != null)
 		{
-			accountMan.AddCoins(score);
+			accountMan.AddCoins(coins);
 		}
 		
 

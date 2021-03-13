@@ -5,19 +5,19 @@ using UnityEngine.UI;
 
 public class DisplayHighscore : MonoBehaviour
 {
-    private int highscore = 0;
+    private float highscore = 0;
     public Text scoreText;
     private void Awake()
     {
         if (PlayerPrefs.HasKey("Highscore"))
         {
-            highscore = PlayerPrefs.GetInt("Highscore");
+            highscore = PlayerPrefs.GetFloat("Highscore");
         }
     }
 
     private void Start()
     {
-        scoreText.text = "Highscore: " + highscore.ToString();
+        scoreText.text = "Highscore: " + System.Math.Round(highscore, 1).ToString();
     }
 }
    
