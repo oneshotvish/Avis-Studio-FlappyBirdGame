@@ -105,8 +105,19 @@ public class GameControl : MonoBehaviour
 
 		if (!gameOver && scrollStarted)
 		{
+			
 			score += Time.deltaTime * score_multi;
-			scoreText.text = ": " + System.Math.Round(score, 1).ToString();
+			double temp = System.Math.Round(score, 1);
+
+			if (temp % 2 == 0 || temp % 2 == 1)
+			{
+				scoreText.text = ": " + temp.ToString() + ".0";
+			}
+			else
+			{
+				scoreText.text = ": " + temp.ToString();
+			}
+			
 		}
 
 		/*if (!gameOver && scrollStarted)
