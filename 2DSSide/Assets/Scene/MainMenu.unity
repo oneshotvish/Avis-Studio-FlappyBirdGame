@@ -1883,7 +1883,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Highscore: 0'
+  m_Text: 'Distance: 0'
 --- !u!222 &913666004
 CanvasRenderer:
   m_ObjectHideFlags: 0

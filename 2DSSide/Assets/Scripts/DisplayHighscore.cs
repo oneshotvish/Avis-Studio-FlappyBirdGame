@@ -17,7 +17,7 @@ public class DisplayHighscore : MonoBehaviour
 
     private void Start()
     {
-        scoreText.text = "Highscore: " + System.Math.Round(highscore, 1).ToString();
+        scoreText.text = "Distance: " + System.Math.Round(highscore, 1).ToString();
     }
 }
    
