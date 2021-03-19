@@ -345,7 +345,7 @@ PrefabInstance:
         type: 3}
       propertyPath: columnPrefab
       value: 
-      objectReference: {fileID: 6948145891819012560, guid: 1452e0ae44e0e7642bab9a1c360c3657,
+      objectReference: {fileID: 6179617274877837364, guid: 63c01b6e94ed50643a00351addcca151,
         type: 3}
     - target: {fileID: 1116833635196453459, guid: 258e1a53f2bc33645a93aee0ed680b56,
         type: 3}
@@ -1907,7 +1907,7 @@ PrefabInstance:
     - target: {fileID: 4564393859871231658, guid: c8b9eae83167b054389ec123693b6f7b,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -0.30000305
+      value: -0.2999878
       objectReference: {fileID: 0}
     - target: {fileID: 4564393859871231658, guid: c8b9eae83167b054389ec123693b6f7b,
         type: 3}
