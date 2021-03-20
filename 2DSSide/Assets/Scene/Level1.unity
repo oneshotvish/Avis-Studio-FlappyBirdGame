@@ -392,7 +392,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &417903524
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1887,47 +1887,47 @@ PrefabInstance:
     - target: {fileID: 4564393859871231658, guid: c8b9eae83167b054389ec123693b6f7b,
         type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0.97900003
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4564393859871231658, guid: c8b9eae83167b054389ec123693b6f7b,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0.5999756
+      value: -170.99506
       objectReference: {fileID: 0}
     - target: {fileID: 4564393859871231658, guid: c8b9eae83167b054389ec123693b6f7b,
         type: 3}
       propertyPath: m_SizeDelta.y
-      value: 2.1802673
+      value: 235.19012
       objectReference: {fileID: 0}
     - target: {fileID: 4564393859871231658, guid: c8b9eae83167b054389ec123693b6f7b,
         type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0.7146667
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 4564393859871231658, guid: c8b9eae83167b054389ec123693b6f7b,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -0.2999878
+      value: 0.1000061
       objectReference: {fileID: 0}
     - target: {fileID: 4564393859871231658, guid: c8b9eae83167b054389ec123693b6f7b,
         type: 3}
       propertyPath: m_SizeDelta.x
-      value: -1.2218933
+      value: 218.60558
       objectReference: {fileID: 0}
     - target: {fileID: 4564393859871231658, guid: c8b9eae83167b054389ec123693b6f7b,
         type: 3}
       propertyPath: m_AnchorMin.y
-      value: 0.8837508
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4564393859871231658, guid: c8b9eae83167b054389ec123693b6f7b,
         type: 3}
       propertyPath: m_AnchorMin.x
-      value: 0.26081243
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 4564393859871231659, guid: c8b9eae83167b054389ec123693b6f7b,
         type: 3}
       propertyPath: m_Text
-      value: ': 0'
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4564393859871231659, guid: c8b9eae83167b054389ec123693b6f7b,
         type: 3}
@@ -1947,7 +1947,7 @@ PrefabInstance:
     - target: {fileID: 4564393859871231659, guid: c8b9eae83167b054389ec123693b6f7b,
         type: 3}
       propertyPath: m_FontData.m_Alignment
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 4564393859871231659, guid: c8b9eae83167b054389ec123693b6f7b,
         type: 3}
@@ -1984,6 +1984,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_FontData.m_AlignByGeometry
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4564393859871231659, guid: c8b9eae83167b054389ec123693b6f7b,
+        type: 3}
+      propertyPath: m_FontData.m_HorizontalOverflow
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4564393860152712905, guid: c8b9eae83167b054389ec123693b6f7b,
         type: 3}
