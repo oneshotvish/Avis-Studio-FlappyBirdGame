@@ -864,7 +864,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &456124382
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1794,18 +1794,18 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: 189136365196f0644b5c753bb65cce4d, type: 3}
-    m_FontSize: 123
+    m_FontSize: 145
     m_FontStyle: 1
     m_BestFit: 0
     m_MinSize: 10
-    m_MaxSize: 152
+    m_MaxSize: 192
     m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: BIRD GAME
+  m_Text: 'InkBird '
 --- !u!222 &825183717
 CanvasRenderer:
   m_ObjectHideFlags: 0
