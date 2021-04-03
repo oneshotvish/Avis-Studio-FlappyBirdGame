@@ -35,8 +35,6 @@ public class AccountManager : MonoBehaviour
         
         //Load Account data
         LoadAccount();
-
-        AddCoins(1000);
     }
 
     //Called From MainMenuLoadHelper

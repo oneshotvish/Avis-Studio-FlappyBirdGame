@@ -12,12 +12,6 @@ public class SelectedItemController : MonoBehaviour
     public Button buyButton;
     [Tooltip("The buy text")]
     public TMP_Text buyText;
-    [Tooltip("The activate button")]
-    public Button activeButton;
-    [Tooltip("The activate text")]
-    public TMP_Text activeText;
-    [Tooltip("The cost text")]
-    public TMP_Text costText;
 
     //Holds Shop Data
     private AccountManager accManager;
@@ -30,7 +24,6 @@ public class SelectedItemController : MonoBehaviour
     private void Start()
     {
         accManager = GameObject.FindGameObjectWithTag("AccountManager").GetComponent<AccountManager>();
-        costText.gameObject.SetActive(false);
     }
 
     /// <summary>
@@ -43,41 +36,20 @@ public class SelectedItemController : MonoBehaviour
         currentItem = selectedItem;
         //Set UI image
         selectedImage.sprite = selectedItem.sprite;
-        costText.gameObject.SetActive(true);
         //If the item is not owned
         if (!selectedItem.isOwned)
         {
-            //Set Cost Text
-            costText.SetText("Cost: " + selectedItem.itemPrice);
-            //Don't allow activation
-            activeButton.interactable = false;
-            activeText.SetText("Activate");
-            //Set up buy button
             buyButton.interactable = true;
+            //Set up buy button
             buyText.SetText(selectedItem.itemPrice.ToString() + " Coins");
         }
         //else if the item is owned
         else if (selectedItem.isOwned)
         {
-            //Set Cost Text
-            costText.SetText("Owned");
+            OnActiveButton();
             //Don't allow buying
             buyButton.interactable = false;
             buyText.SetText("Owned");
-            //If the item is already active
-            if (selectedItem.isActive)
-            {
-                //Don't allow activation
-                activeButton.interactable = false;
-                activeText.SetText("Activated!");
-            }
-            //Else if the item is not active
-            else if (!selectedItem.isActive)
-            {
-                //Set up active button
-                activeButton.interactable = true;
-                activeText.SetText("Activate");
-            }
         }
     }
 
@@ -86,8 +58,10 @@ public class SelectedItemController : MonoBehaviour
     /// </summary>
     public void OnBuyButton()
     {
+        Debug.Log("OBB1");
         if(accManager.GetCoins() >= currentItem.itemPrice)
         {
+            Debug.Log("OBB2");
             accManager.SubtractCoins(currentItem.itemPrice);
             //Update this item's status
             currentItem.isOwned = true;
@@ -107,7 +81,5 @@ public class SelectedItemController : MonoBehaviour
     {
         //Update the active item
         accManager.UpdateActive(currentItem);
-        //Refresh UI
-        TakeSelectedItem(currentItem);
     }
 }

@@ -52,7 +52,6 @@ MonoBehaviour:
   itemController: {fileID: 0}
   buyButton: {fileID: 3623498445721165695}
   buyText: {fileID: 0}
-  unownedBar: {fileID: 0}
 --- !u!1 &3623498445721165695
 GameObject:
   m_ObjectHideFlags: 0

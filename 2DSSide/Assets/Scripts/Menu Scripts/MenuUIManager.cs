@@ -34,4 +34,9 @@ public class MenuUIManager : MonoBehaviour
     {
         buttonToUninteractable.interactable = false;
     }
+
+    public void SwapShopTabs(GameObject tabBG)
+    {
+        tabBG.transform.SetAsLastSibling();
+    }
 }

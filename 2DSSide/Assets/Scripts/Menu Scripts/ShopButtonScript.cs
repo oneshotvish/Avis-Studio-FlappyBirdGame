@@ -8,12 +8,12 @@ public class ShopButtonScript : MonoBehaviour
 {
     public SelectedItemController itemController;
     //This particular item
+    [SerializeField]
     private ShopItem thisShopItem;
     //Buy Button
     public GameObject buyButton;
     //Bird Image
     public TMP_Text buyText;
-    public GameObject unownedBar;
 
     //Start
     private void Start()
@@ -39,30 +39,5 @@ public class ShopButtonScript : MonoBehaviour
     public void OnItemClick()
     {
         itemController.TakeSelectedItem(thisShopItem);
-        //Debug.Log("aa");
-        ////On first buy of item
-        //if(!thisShopItem.isOwned)
-        //{
-        //    Debug.Log("bb");
-        //    //Set owned to true
-        //    thisShopItem.isOwned = true;
-        //    //Set New Buy to active
-        //    thisShopItem.isActive = true;
-        //    //Send to Master List
-        //    masterItemList.UpdateShop(thisShopItem);
-        //    //Update Master List Active
-        //    masterItemList.UpdateActive(thisShopItem);            
-        //}
-        ////On selecting already bought item
-        //if (thisShopItem.isOwned && !thisShopItem.isActive)
-        //{
-        //    Debug.Log("cc");
-        //    //Set to active
-        //    thisShopItem.isActive = true;
-        //    //Send to Master List
-        //    masterItemList.UpdateShop(thisShopItem);
-        //    //Update Master List Active
-        //    masterItemList.UpdateActive(thisShopItem);
-        //}
     }
 }
