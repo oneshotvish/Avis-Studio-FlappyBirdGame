@@ -1029,7 +1029,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &456124382
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1057,7 +1057,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 117.93997, y: -41.79999}
+  m_AnchoredPosition: {x: 117.93994, y: -41.80005}
   m_SizeDelta: {x: 168.21686, y: 98.99181}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &505440220
@@ -2247,7 +2247,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemList:
-  - itemName: Bird
+  - itemName: Box Bird
     itemType: 0
     itemPrice: 0
     isOwned: 0
@@ -2271,14 +2271,14 @@ MonoBehaviour:
     objPrefab: {fileID: 371560662734499640, guid: 6ba75b6d46501ec4497077b50ea188c9,
       type: 3}
     sprite: {fileID: 21300000, guid: 081ff1945748ad441b330fef94df8c1c, type: 3}
-  - itemName: TNT Bird
+  - itemName: Fat Bird
     itemType: 0
     itemPrice: 75
     isOwned: 0
     isActive: 0
     objPrefab: {fileID: 4749691861211239808, guid: a0a3d9faef91ba44695a25a025644f4a,
       type: 3}
-    sprite: {fileID: 21300000, guid: cca18c402b87ee74389fee1d6e3a0232, type: 3}
+    sprite: {fileID: 21300000, guid: 036800da13a40774c966e0d3b4dd17d4, type: 3}
   - itemName: Pencil
     itemType: 1
     itemPrice: 0
@@ -3128,7 +3128,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.046000004}
   m_AnchorMax: {x: 0.7862955, y: 1}
-  m_AnchoredPosition: {x: 0.13659668, y: -2.7000122}
+  m_AnchoredPosition: {x: 0.13659668, y: -2.7000732}
   m_SizeDelta: {x: 30.473267, y: 7.3573}
   m_Pivot: {x: 1, y: 0.5}
 --- !u!114 &1341149498
