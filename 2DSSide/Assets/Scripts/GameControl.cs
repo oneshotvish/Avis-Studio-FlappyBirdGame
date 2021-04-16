@@ -111,11 +111,11 @@ public class GameControl : MonoBehaviour
 
 			if (temp % 2 == 0 || temp % 2 == 1)
 			{
-				scoreText.text = ": " + temp.ToString() + ".0";
+				scoreText.text = temp.ToString() + ".0";
 			}
 			else
 			{
-				scoreText.text = ": " + temp.ToString();
+				scoreText.text = temp.ToString();
 			}
 			
 		}

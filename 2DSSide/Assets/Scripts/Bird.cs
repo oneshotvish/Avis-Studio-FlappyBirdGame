@@ -22,6 +22,7 @@ public class Bird : MonoBehaviour
 		source = GameObject.FindGameObjectWithTag("AudioSource").GetComponent<AudioSource>();
 
 		rb2d.isKinematic = true;
+		rb2d.constraints = RigidbodyConstraints2D.FreezeAll;
 	}
 
 	void Update()
@@ -43,6 +44,7 @@ public class Bird : MonoBehaviour
 			}else if (Input.GetMouseButtonDown(0) && !GameControl.instance.scrollStarted)
 			{
 				rb2d.isKinematic = false;
+				rb2d.constraints = RigidbodyConstraints2D.None;
 				GameControl.instance.StartScroll();
 
 				anim.SetTrigger("Flap");
