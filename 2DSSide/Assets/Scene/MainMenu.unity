@@ -2467,6 +2467,14 @@ MonoBehaviour:
     objPrefab: {fileID: 6948145891819012560, guid: 1452e0ae44e0e7642bab9a1c360c3657,
       type: 3}
     sprite: {fileID: 21300000, guid: 6d6c845cc2cf3d944975e00e5d5eb529, type: 3}
+  - itemName: HappyBird
+    itemType: 0
+    itemPrice: 50
+    isOwned: 0
+    isActive: 0
+    objPrefab: {fileID: 4749691861211239808, guid: 9cc3b9ad93f7c5446a61344a8a40eb16,
+      type: 3}
+    sprite: {fileID: 21300000, guid: 3c52d7fc0d16beb49ae308e6818c95e6, type: 3}
   birdShopManager: {fileID: 0}
   wallShopManager: {fileID: 0}
 --- !u!1 &1036945556
