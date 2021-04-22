@@ -1278,7 +1278,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &456124382
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2426,15 +2426,15 @@ MonoBehaviour:
     isActive: 0
     objPrefab: {fileID: 1022016045144286433, guid: 06cfac9c856baa9438e807fa6442d43c,
       type: 3}
-    sprite: {fileID: 21300000, guid: 036a9d54075f2aa4e8fe8908f2d31e24, type: 3}
-  - itemName: Bomb Bird
+    sprite: {fileID: 21300000, guid: a3a0ef452b388624fbfb018bde136d9e, type: 3}
+  - itemName: BowlingBall Bird
     itemType: 0
     itemPrice: 50
     isOwned: 0
     isActive: 0
     objPrefab: {fileID: 1022016045144286433, guid: 4bff6cfd1d26e9a4fb6b9e3027a08ff6,
       type: 3}
-    sprite: {fileID: 21300000, guid: 2f9a55d6dbce4a342ae68174aa18bde9, type: 3}
+    sprite: {fileID: 21300000, guid: 5b56fe096af7c9c49b92def19af03ccc, type: 3}
   - itemName: Dove Bird
     itemType: 0
     itemPrice: 50
