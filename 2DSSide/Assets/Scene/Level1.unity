@@ -362,7 +362,7 @@ PrefabInstance:
     - target: {fileID: 1116833635196453459, guid: 258e1a53f2bc33645a93aee0ed680b56,
         type: 3}
       propertyPath: columnPoolSize
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 1116833635196453459, guid: 258e1a53f2bc33645a93aee0ed680b56,
         type: 3}
@@ -373,7 +373,7 @@ PrefabInstance:
     - target: {fileID: 1116833635196453459, guid: 258e1a53f2bc33645a93aee0ed680b56,
         type: 3}
       propertyPath: spawnRate
-      value: 4.5
+      value: 2.5
       objectReference: {fileID: 0}
     - target: {fileID: 1116833635196453459, guid: 258e1a53f2bc33645a93aee0ed680b56,
         type: 3}
