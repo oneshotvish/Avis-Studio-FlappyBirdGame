@@ -325,6 +325,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   coin: {fileID: 7396274404608971313}
+  coinParticleEffect: {fileID: 1107000365035539902, guid: 18584bf5039bdd0499470ef0408d40d7,
+    type: 3}
 --- !u!1 &7396274404608971313
 GameObject:
   m_ObjectHideFlags: 0
