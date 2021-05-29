@@ -19,6 +19,7 @@ public class GameControl : MonoBehaviour
 
 	public static GameControl instance;         //A reference to our game control script so we can access it statically.
 	public Text scoreText;                      //A reference to the UI text component that displays the player's score.
+	public TMP_Text coinText;                   //A reference to the UI text component that displays the player's coins.
 
 	public Text endScore;
 	public Text highscoreText;
@@ -164,6 +165,9 @@ public class GameControl : MonoBehaviour
 		//...and adjust the score text.
 		//scoreText.text = ": " + score.ToString();
 
+		//Update coins
+		coinText.SetText(": " + coins.ToString());
+
 		//updateHighscore();
 	}
 
@@ -199,6 +203,9 @@ public class GameControl : MonoBehaviour
 
 		//Set the game to be over.
 		gameOver = true;
+
+		//Reset coins
+		coins = 0;
 	}
 
 	public void StartScroll()

@@ -29,7 +29,7 @@ public class AccountManager : MonoBehaviour
     /// Start
     /// </summary>
     void Start()
-    {           
+    {
         //Get Shop Length
         shopLength = itemList.Length;
         
