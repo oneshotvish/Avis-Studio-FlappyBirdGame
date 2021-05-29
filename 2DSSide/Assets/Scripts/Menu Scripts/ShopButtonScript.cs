@@ -33,6 +33,9 @@ public class ShopButtonScript : MonoBehaviour
     {
         //Set Shop Sprite
         buyButton.GetComponent<Image>().sprite = thisShopItem.sprite;
+        buyButton.GetComponent<Image>().SetNativeSize();
+        GetComponentInParent<ShopParser>().AddElement();
+        //GetComponentInParent<UIParser>().AddToList(this);
     }
 
     //After user buys item, update UI and send information to Master List

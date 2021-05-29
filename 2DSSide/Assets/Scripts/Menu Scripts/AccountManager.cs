@@ -41,11 +41,11 @@ public class AccountManager : MonoBehaviour
     public void GetShopManagers()
     {
         //Get ShopManager
-        birdShopManager = GameObject.FindGameObjectWithTag("BirdShopManager").GetComponent<ShopManager>();
-        wallShopManager = GameObject.FindGameObjectWithTag("WallShopManager").GetComponent<ShopManager>();
+        //birdShopManager = GameObject.FindGameObjectWithTag("BirdShopManager").GetComponent<ShopManager>();
+       // wallShopManager = GameObject.FindGameObjectWithTag("WallShopManager").GetComponent<ShopManager>();
         coinManager = GameObject.FindGameObjectWithTag("CoinManager").GetComponent<CoinManager>();
         coinManager.UpdateCoinUI(acc.coins);
-        birdShopManager.transform.parent.gameObject.SetActive(false);
+        //birdShopManager.transform.parent.gameObject.SetActive(false);
     }
 
     /// <summary>

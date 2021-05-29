@@ -67,9 +67,9 @@ public class ShopManager : MonoBehaviour
     private void InitUI()
     {
         //Only keep the initial grid active
-        if(gridType != ItemType.Bird)
-        {
-            gameObject.SetActive(false);
-        }
+        //if(gridType != ItemType.Bird)
+       // {
+        //    gameObject.SetActive(false);
+        //}
     }
 }

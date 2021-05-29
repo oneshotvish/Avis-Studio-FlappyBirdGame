@@ -9,7 +9,7 @@ public class MainMenuLoadHelper : MonoBehaviour
     void Start()
     {
         accMan = GameObject.FindGameObjectWithTag("AccountManager").GetComponent<AccountManager>();
-        accMan.GetShopManagers();
+        //accMan.GetShopManagers();
         Destroy(gameObject);
     }
 }

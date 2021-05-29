@@ -40,7 +40,7 @@ public class DifficultySingleton : MonoBehaviour
     {
         
         isHard = !isHard;
-        Debug.Log(isHard);
+       // Debug.Log(isHard);
 
     }
 
