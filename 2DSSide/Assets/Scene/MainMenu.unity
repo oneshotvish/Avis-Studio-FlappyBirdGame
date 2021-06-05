@@ -2650,7 +2650,7 @@ Canvas:
   m_OverrideSorting: 0
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
-  m_AdditionalShaderChannelsFlag: 1
+  m_AdditionalShaderChannelsFlag: 25
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
@@ -3315,8 +3315,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 26.173004, y: -39.3727}
-  m_SizeDelta: {x: 75, y: 75}
+  m_AnchoredPosition: {x: 34.9, y: -45.3}
+  m_SizeDelta: {x: 129.05783, y: 129.05783}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1723973219
 MonoBehaviour:
@@ -3968,8 +3968,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 200.96667, y: -37.5}
-  m_SizeDelta: {x: 400, y: 75}
+  m_AnchoredPosition: {x: 169, y: -70}
+  m_SizeDelta: {x: 178.5994, y: 80.14865}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2005178070
 MonoBehaviour:
@@ -4018,15 +4018,15 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 67.1
+  m_fontSize: 71.7
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
-  m_textAlignment: 257
-  m_characterSpacing: -13.37
+  m_textAlignment: 513
+  m_characterSpacing: -0.7
   m_wordSpacing: 0
   m_lineSpacing: 0
   m_lineSpacingMax: 0
