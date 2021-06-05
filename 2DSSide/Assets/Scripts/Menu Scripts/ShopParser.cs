@@ -27,19 +27,21 @@ public class ShopParser : MonoBehaviour
 
     public void LeftButton()
     {
+        layoutOffset = layoutGroup.spacing;
         if (elementIndex > 0)
         {
             //Move over whole list by: offset * scale.x
-            trans.localPosition = new Vector3(trans.localPosition.x + (layoutOffset * trans.localScale.x), trans.localPosition.y, trans.localPosition.z);
+            trans.localPosition = new Vector3(trans.localPosition.x + (layoutOffset/* * trans.localScale.x*/), trans.localPosition.y, trans.localPosition.z);
             elementIndex--;
         }
     }
 
     public void RightButton()
     {
+        layoutOffset = layoutGroup.spacing;
         if (elementIndex < (elementCount - 1))
         {
-            trans.localPosition = new Vector3(trans.localPosition.x - (layoutOffset * trans.localScale.x), trans.localPosition.y, trans.localPosition.z);
+            trans.localPosition = new Vector3(trans.localPosition.x - (layoutOffset/* * trans.localScale.x*/), trans.localPosition.y, trans.localPosition.z);
             elementIndex++;
         }
     }
