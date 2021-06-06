@@ -31,7 +31,7 @@ public class ShopParser : MonoBehaviour
         if (elementIndex > 0)
         {
             //Move over whole list by: offset * scale.x
-            trans.localPosition = new Vector3(trans.localPosition.x + (layoutOffset/* * trans.localScale.x*/), trans.localPosition.y, trans.localPosition.z);
+            trans.localPosition = new Vector3(trans.localPosition.x + (layoutOffset * trans.localScale.x), trans.localPosition.y, trans.localPosition.z);
             elementIndex--;
         }
     }
@@ -41,7 +41,7 @@ public class ShopParser : MonoBehaviour
         layoutOffset = layoutGroup.spacing;
         if (elementIndex < (elementCount - 1))
         {
-            trans.localPosition = new Vector3(trans.localPosition.x - (layoutOffset/* * trans.localScale.x*/), trans.localPosition.y, trans.localPosition.z);
+            trans.localPosition = new Vector3(trans.localPosition.x - (layoutOffset * trans.localScale.x), trans.localPosition.y, trans.localPosition.z);
             elementIndex++;
         }
     }
