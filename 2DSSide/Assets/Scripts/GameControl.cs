@@ -166,7 +166,7 @@ public class GameControl : MonoBehaviour
 		//scoreText.text = ": " + score.ToString();
 
 		//Update coins
-		coinText.SetText(": " + coins.ToString());
+		coinText.SetText(" " + coins.ToString());
 
 		//updateHighscore();
 	}
