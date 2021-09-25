@@ -48,7 +48,7 @@ public class SelectedItemController : MonoBehaviour
         {
             OnActiveButton();
             //Don't allow buying
-            buyButton.interactable = false;
+            //buyButton.interactable = false;
             buyText.SetText("Owned");
         }
     }

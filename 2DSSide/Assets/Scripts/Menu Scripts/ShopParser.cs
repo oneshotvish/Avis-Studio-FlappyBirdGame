@@ -45,4 +45,9 @@ public class ShopParser : MonoBehaviour
             elementIndex++;
         }
     }
+
+    public void SendSelectedData()
+    {
+
+    }
 }

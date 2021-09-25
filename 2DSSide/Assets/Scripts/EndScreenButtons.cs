@@ -14,7 +14,6 @@ public class EndScreenButtons : MonoBehaviour
 
     public void MainMenu()
     {
-        Debug.Log("0");
         SceneManager.LoadScene(0);
     }
 }

@@ -71,7 +71,7 @@ public class GameControl : MonoBehaviour
 	private void Start()
 	{
 		//Find Account Manager
-		//accountMan = GameObject.FindGameObjectWithTag("AccountManager").GetComponent<AccountManager>();
+		accountMan = GameObject.FindGameObjectWithTag("AccountManager").GetComponent<AccountManager>();
 
 		accountMan = FindObjectOfType<AccountManager>();
 
@@ -197,6 +197,7 @@ public class GameControl : MonoBehaviour
 		//This line was causing scroll error
 		if (accountMan != null)
 		{
+			Debug.Log($"Added {coins} coins");
 			accountMan.AddCoins(coins);
 		}
 		
