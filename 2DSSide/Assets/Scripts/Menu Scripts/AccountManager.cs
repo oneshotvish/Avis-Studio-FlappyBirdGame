@@ -7,7 +7,6 @@ public class AccountManager : MonoBehaviour
     public Account acc;
     private int shopLength;
     public ShopItem[] itemList;
-    public ShopManager birdShopManager, wallShopManager;
     private CoinManager coinManager;
 
     
@@ -40,9 +39,6 @@ public class AccountManager : MonoBehaviour
     //Called From MainMenuLoadHelper
     public void GetShopManagers()
     {
-        //Get ShopManager
-        //birdShopManager = GameObject.FindGameObjectWithTag("BirdShopManager").GetComponent<ShopManager>();
-       // wallShopManager = GameObject.FindGameObjectWithTag("WallShopManager").GetComponent<ShopManager>();
         coinManager = GameObject.FindGameObjectWithTag("CoinManager").GetComponent<CoinManager>();
         coinManager.UpdateCoinUI(acc.coins);
         //birdShopManager.transform.parent.gameObject.SetActive(false);

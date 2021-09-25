@@ -13,11 +13,24 @@ public class ShopParser : MonoBehaviour
 
     private int elementCount = 0;
     private int elementIndex = 0;
+
+    private AccountManager accountMan;
+    //Enum of the different shop grid types
+    public enum ItemType
+    {
+        Bird,
+        Wall,
+    }
+    //This manager's grid type
+    public ItemType gridType;
+
     private void Start()
     {
         trans = shopContentParent.GetComponent<RectTransform>();
         layoutOffset = layoutGroup.spacing;
         Debug.Log(trans.localPosition.x);
+
+        accountMan = GameObject.FindGameObjectWithTag("AccountManager").GetComponent<AccountManager>();
     }
 
     public void AddElement()
@@ -48,6 +61,16 @@ public class ShopParser : MonoBehaviour
 
     public void SendSelectedData()
     {
-
+        Debug.Log("Send Data");
+        List<ShopItem> tempList = new List<ShopItem>();
+        for (int i = 0; i < accountMan.itemList.Length; i++)
+        {
+            //Only for this grid type
+            if (accountMan.itemList[i].itemType.ToString() == gridType.ToString())
+            {
+                tempList.Add(accountMan.itemList[i]);
+            }
+        }
+        accountMan.UpdateActive(tempList[elementIndex]);
     }
 }

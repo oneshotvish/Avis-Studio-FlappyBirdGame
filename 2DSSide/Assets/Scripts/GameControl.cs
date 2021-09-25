@@ -183,30 +183,35 @@ public class GameControl : MonoBehaviour
 
 	public void BirdDied()
 	{
-		updateHighscore();
-		//Activate the game over text.
-		gameOvertext.SetActive(true);
-
-		//set score text
-		endScore.text = ": " + coins.ToString();
-		//highscoreText.text = "             :" + highscore.ToString();
-		highscoreText.text = ": " + System.Math.Round(score, 1).ToString();
-
-		//Add coins to Account
-
-		//This line was causing scroll error
-		if (accountMan != null)
+		if (!gameOver)
 		{
-			Debug.Log($"Added {coins} coins");
-			accountMan.AddCoins(coins);
-		}
 		
+			updateHighscore();
+			//Activate the game over text.
+			gameOvertext.SetActive(true);
 
-		//Set the game to be over.
-		gameOver = true;
+			//set score text
+			endScore.text = ": " + coins.ToString();
+			//highscoreText.text = "             :" + highscore.ToString();
+			highscoreText.text = ": " + System.Math.Round(score, 1).ToString();
 
-		//Reset coins
-		coins = 0;
+			//Add coins to Account
+
+			//This line was causing scroll error
+			if (accountMan != null)
+			{
+				Debug.Log($"Added {coins} coins");
+				accountMan.AddCoins(coins);
+			}
+
+
+		
+			//Set the game to be over.
+			gameOver = true;
+
+			//Reset coins
+			coins = 0;
+		}	
 	}
 
 	public void StartScroll()

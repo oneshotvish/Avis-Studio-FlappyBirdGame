@@ -80,6 +80,6 @@ public class SelectedItemController : MonoBehaviour
     public void OnActiveButton()
     {
         //Update the active item
-        accManager.UpdateActive(currentItem);
+        //accManager.UpdateActive(currentItem);
     }
 }

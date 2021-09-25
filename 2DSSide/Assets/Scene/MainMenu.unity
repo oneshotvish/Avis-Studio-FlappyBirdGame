@@ -1466,6 +1466,28 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1970189873}
+        m_MethodName: SendSelectedData
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1838990605}
+        m_MethodName: SendSelectedData
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &505440224
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2411,8 +2433,6 @@ MonoBehaviour:
     objPrefab: {fileID: 7605417628428513124, guid: d5d1004721f28454fb41073c2e4a8e44,
       type: 3}
     sprite: {fileID: 21300000, guid: 31ecb50ef25274e498df28300e1d85e6, type: 3}
-  birdShopManager: {fileID: 0}
-  wallShopManager: {fileID: 0}
 --- !u!1 &1036945556
 GameObject:
   m_ObjectHideFlags: 0
@@ -3968,7 +3988,7 @@ GameObject:
   - component: {fileID: 1838990605}
   m_Layer: 5
   m_Name: ShopParserUI (1)
-  m_TagString: Untagged
+  m_TagString: WallShopManager
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4009,6 +4029,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   shopContentParent: {fileID: 1637267077}
   layoutGroup: {fileID: 1637267078}
+  gridType: 1
 --- !u!1 &1863686596
 GameObject:
   m_ObjectHideFlags: 0
@@ -4539,7 +4560,7 @@ GameObject:
   - component: {fileID: 1970189873}
   m_Layer: 5
   m_Name: ShopParserUI
-  m_TagString: Untagged
+  m_TagString: BirdShopManager
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4580,6 +4601,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   shopContentParent: {fileID: 974430444}
   layoutGroup: {fileID: 974430447}
+  gridType: 0
 --- !u!1 &1971734722
 GameObject:
   m_ObjectHideFlags: 0

@@ -23,6 +23,7 @@ public class ColumnPool : MonoBehaviour
 
 	void Start()
 	{
+		accountMan = FindObjectOfType<AccountManager>();
 		SelectActiveColumn();
 		timeSinceLastSpawned = 0f;
 
@@ -35,7 +36,7 @@ public class ColumnPool : MonoBehaviour
 			columns[i] = (GameObject)Instantiate(columnPrefab, objectPoolPosition, Quaternion.identity);
 		}
 
-		accountMan = FindObjectOfType<AccountManager>();
+		
 	}
 
 
@@ -80,8 +81,6 @@ public class ColumnPool : MonoBehaviour
 
 		if (accountMan != null)
 		{
-
-
 			for (int i = 0; i < accountMan.itemList.Length; i++)
 			{
 				if (accountMan.itemList[i].isActive && accountMan.itemList[i].itemType.ToString() == "Wall")
